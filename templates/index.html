@@ -4,7 +4,9 @@
 	<body>
 		<ul>
 			<li><img src="{{ url_for('static', filename='abc.jpg') }}"></li>
-			<li>Ei Ei Kyaw</li>
+			{# This is comment block. We will set some variables in the jinja template. #}
+			{% set name = "Ei Ei Kyaw" %}
+			<li>{{ name }}</li>
 			<li><a href="http://github.com/EiEiKyaw">Github</a></li>
 			<li><a href="http://EiEiKyaw.herokuapp.com">Heroku</a></li>
 		</ul>
