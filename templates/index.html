@@ -3,7 +3,7 @@
 	<head><title>Flask with Jinja</title></head>
 	<body>
 		<ul>
-			<li><img src="{{ url_for('static', filename='abc.jpg') }}"></li>
+			<li><img src="{{ url_for('templates', filename='abc.jpg') }}"></li>
 			{# This is comment block. We will set some variables in the jinja template. #}
 			{% set name = "Ei Ei Kyaw" %}
 			{% set user_name = "EiEiKyaw" %}
