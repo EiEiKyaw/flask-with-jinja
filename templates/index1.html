@@ -8,7 +8,7 @@
            if ('serviceWorker' in navigator) 
                       {
                       window.addEventListener('load', function() {
-                        navigator.serviceWorker.register('static/sw.js')
+			      navigator.serviceWorker.register('{{ url_for('static', filename='sw.js') }}')
                         .then(function() { console.log("Service Worker Registered"); });
                       }
                       );
@@ -70,7 +70,7 @@
                                     
         <header><h1>Ei Ei Kyaw</h1>
                                         
-		<p>I am a student learnind computer science. <br>I am learning git lessons on <br><a href="http://EiEiKyaw.github.io">GitHub.</a></p>
+		<p>I am a student learnind computer science. <br>I am learning git lessons on <br><a href="http://github.com/EiEiKyaw">GitHub.</a></p>
                                     
             </header>
                                     
@@ -112,8 +112,8 @@
     
     <article id="work" class="panel secondary inactive" style="display: none;">
            
-	    <div class="image" style="background-image: {{ url_for('static' , filename='aaa.jpg') }};background-position: center center;">
-		    <img src="{{ url_for('static' , filename='aaa.jpg') }}" alt="" data-position="center center" style="display: none;">
+	    <div class="image" style="background-image: {{ url_for('static', filename='aaa.jpg') }};background-position: center center;">
+		    <img src="{{ url_for('static', filename='aaa.jpg') }}" alt="" data-position="center center" style="display: none;">
         </div> 
         <div class="content">
         <ul class="actions spinX"><li>
@@ -154,8 +154,8 @@
                         
         <article id="about" class="panel secondary inactive" style="display: none;">
                             
-		<div class="image" style="background-image: {{ url_for('static' , filename='eee.jpg') }}; background-position: center center;">
-		<img style="display: none;" alt="" src="{{ url_for('static' , filename='eee.jpg') }}" data-position="center center"/>
+		<div class="image" style="background-image: {{ url_for('static', filename='eee.jpg') }}; background-position: center center;">
+		<img style="display: none;" alt="" src="{{ url_for('static', filename='eee.jpg') }}" data-position="center center"/>
 	</div>
     
          <div class="content">
